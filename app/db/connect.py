@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 import json
 import os
 
-def database_connect():
+def database_connect(target):
     if target == "imdb":
         engine = create_engine(
             "mysql+pymysql://imdbUser:imdbPass@localhost:3306/imdb?charset=utf8mb4"
